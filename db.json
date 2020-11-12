@@ -1,0 +1,389 @@
+{
+  "types": [
+    {
+      "id": 1,
+      "name": "Стандартный двухместный",
+      "visitors": 2,
+      "price": 100,
+      "images": [
+        "/assets/images/standard/01.jpg",
+        "/assets/images/standard/02.jpg",
+        "/assets/images/standard/03.jpg",
+        "/assets/images/standard/04.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Стандартный трехместный",
+      "visitors": 3,
+      "price": 130,
+      "images": [
+        "/assets/images/standard/01.jpg",
+        "/assets/images/standard/02.jpg",
+        "/assets/images/standard/03.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Комфорт двухместный",
+      "visitors": 2,
+      "price": 180,
+      "images": [
+        "/assets/images/comfort/01.jpg",
+        "/assets/images/comfort/02.jpg",
+        "/assets/images/comfort/03.jpg",
+        "/assets/images/comfort/04.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Комфорт трехместный",
+      "visitors": 3,
+      "price": 180,
+      "images": [
+        "/assets/images/comfort/01.jpg",
+        "/assets/images/comfort/02.jpg",
+        "/assets/images/comfort/03.jpg",
+        "/assets/images/comfort/04.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Люкс двухместный",
+      "visitors": 2,
+      "price": 200,
+      "images": [
+        "/assets/images/lux/01.jpg",
+        "/assets/images/lux/02.jpg",
+        "/assets/images/lux/03.jpg",
+        "/assets/images/lux/04.jpg",
+        "/assets/images/lux/05.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Люкс трехместный",
+      "visitors": 3,
+      "price": 250,
+      "images": [
+        "/assets/images/lux/01.jpg",
+        "/assets/images/lux/02.jpg",
+        "/assets/images/lux/03.jpg",
+        "/assets/images/lux/04.jpg",
+        "/assets/images/lux/05.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Комфорт четырёхместный",
+      "visitors": 4,
+      "price": 250,
+      "images": [
+        "/assets/images/comfort/01.jpg",
+        "/assets/images/comfort/02.jpg",
+        "/assets/images/comfort/03.jpg",
+        "/assets/images/comfort/04.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Люкс четырёхместный",
+      "visitors": 4,
+      "price": 320,
+      "images": [
+        "/assets/images/lux/01.jpg",
+        "/assets/images/lux/02.jpg",
+        "/assets/images/lux/03.jpg",
+        "/assets/images/lux/04.jpg",
+        "/assets/images/lux/05.jpg"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": 0,
+      "typeId": 1
+    },
+    {
+      "id": 1,
+      "typeId": 2
+    },
+    {
+      "id": 2,
+      "typeId": 2
+    },
+    {
+      "id": 3,
+      "typeId": 3
+    },
+    {
+      "id": 4,
+      "typeId": 3
+    },
+    {
+      "id": 5,
+      "typeId": 4
+    },
+    {
+      "id": 6,
+      "typeId": 5
+    },
+    {
+      "id": 7,
+      "typeId": 5
+    },
+    {
+      "id": 8,
+      "typeId": 6
+    },
+    {
+      "id": 9,
+      "typeId": 6
+    },
+    {
+      "id": 10,
+      "typeId": 6
+    },
+    {
+      "id": 11,
+      "typeId": 7
+    },
+    {
+      "id": 12,
+      "typeId": 7
+    },
+    {
+      "id": 13,
+      "typeId": 8
+    },
+    {
+      "id": 14,
+      "typeId": 8
+    }
+  ],
+  "orders": [
+    {
+      "id": 2,
+      "roomId": 3,
+      "name": "germogen",
+      "guests": 1,
+      "children": 2,
+      "start": "2020-08-21",
+      "finish": "2020-08-28"
+    },
+    {
+      "id": 3,
+      "roomId": 1,
+      "name": "valentin",
+      "guests": 1,
+      "children": 2,
+      "start": "2020-08-11",
+      "finish": "2020-08-18"
+    },
+    {
+      "roomId": 2,
+      "name": "prokofiy",
+      "guests": 2,
+      "children": 1,
+      "start": "2020-08-12",
+      "finish": "2020-08-17",
+      "id": 12
+    },
+    {
+      "roomId": 2,
+      "name": "olgerd",
+      "guests": 2,
+      "children": 2,
+      "start": "2020-08-17",
+      "finish": "2020-08-22",
+      "id": 13
+    },
+    {
+      "roomId": 1,
+      "name": "vikentiy",
+      "guests": 3,
+      "children": 0,
+      "start": "2020-08-18",
+      "finish": "2020-08-22",
+      "id": 14
+    },
+    {
+      "roomId": 3,
+      "name": "pafnutiy",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-08-11",
+      "finish": "2020-08-20",
+      "id": 15
+    },
+    {
+      "roomId": 0,
+      "name": "iscander",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-08-24",
+      "finish": "2020-08-30",
+      "id": 16
+    },
+    {
+      "roomId": 1,
+      "name": "vladilen",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-08-25",
+      "finish": "2020-08-31",
+      "id": 17
+    },
+    {
+      "roomId": 4,
+      "name": "nestor",
+      "guests": 2,
+      "children": 1,
+      "start": "2020-08-25",
+      "finish": "2020-08-31",
+      "id": 18
+    },
+    {
+      "roomId": 6,
+      "name": "taras",
+      "guests": 2,
+      "children": 1,
+      "start": "2020-08-24",
+      "finish": "2020-08-31",
+      "id": 19
+    },
+    {
+      "roomId": 2,
+      "name": "paramon",
+      "guests": 3,
+      "children": 1,
+      "start": "2020-08-25",
+      "finish": "2020-08-31",
+      "id": 20
+    },
+    {
+      "roomId": "3",
+      "name": "trofim",
+      "guests": 2,
+      "children": 1,
+      "start": "2020-08-28",
+      "finish": "2020-09-02",
+      "id": 21
+    },
+    {
+      "roomId": "5",
+      "name": "gennady",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-08-30",
+      "finish": "2020-09-05",
+      "id": 22
+    },
+    {
+      "roomId": "2",
+      "name": "leonid",
+      "guests": 1,
+      "children": 2,
+      "start": "2020-08-22",
+      "finish": "2020-08-25",
+      "id": 23
+    },
+    {
+      "roomId": "5",
+      "name": "gennady",
+      "guests": 3,
+      "children": 0,
+      "start": "2020-08-17",
+      "finish": "2020-08-21",
+      "id": 24
+    },
+    {
+      "roomId": "5",
+      "name": "timofey",
+      "guests": 2,
+      "children": 2,
+      "start": "2020-08-24",
+      "finish": "2020-08-30",
+      "id": 25
+    },
+    {
+      "roomId": "1",
+      "name": "oleg",
+      "guests": 2,
+      "children": 2,
+      "start": "2020-08-22",
+      "finish": "2020-08-25",
+      "id": 26
+    },
+    {
+      "roomId": "0",
+      "name": "gavrila",
+      "guests": 1,
+      "children": 2,
+      "start": "2020-08-18",
+      "finish": "2020-08-24",
+      "sum": "600$",
+      "id": 27
+    },
+    {
+      "roomId": "4",
+      "name": "grigory",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-08-19",
+      "finish": "2020-08-25",
+      "sum": "1080$",
+      "id": 28
+    },
+    {
+      "roomId": 1,
+      "name": "dormidont",
+      "guests": 2,
+      "children": 2,
+      "start": "2020-09-14",
+      "finish": "2020-09-21",
+      "sum": "910$",
+      "id": 29
+    },
+    {
+      "roomId": "7",
+      "name": "kliment",
+      "guests": 2,
+      "children": 2,
+      "start": "2020-08-31",
+      "finish": "2020-09-05",
+      "sum": "1000$",
+      "id": 30
+    },
+    {
+      "roomId": "8",
+      "name": "vikentiy",
+      "guests": 3,
+      "children": 0,
+      "start": "2020-09-04",
+      "finish": "2020-09-10",
+      "sum": "1500$",
+      "id": 31
+    },
+    {
+      "roomId": "7",
+      "name": "kalistrat",
+      "guests": 2,
+      "children": 0,
+      "start": "2020-09-05",
+      "finish": "2020-09-10",
+      "sum": "1000$",
+      "id": 32
+    },
+    {
+      "roomId": 5,
+      "name": "gennady",
+      "guests": 3,
+      "children": 1,
+      "start": "2020-11-17",
+      "finish": "2020-11-24",
+      "sum": "1260$",
+      "id": 33
+    }
+  ]
+}

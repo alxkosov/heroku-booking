@@ -1,0 +1,176 @@
+@cellHeight: 32px;
+@cellWidth: 22px;
+
+.shedule-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.shedule {
+  //width: 100%;
+
+  &__row {
+    display: table-row;
+    padding: 8px;
+  }
+
+  &__head-row {
+    display: table-row;
+    padding: 8px;
+    background: #f5f5f5;
+  }
+
+  &__head {
+    display: table-cell;
+    width: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 8px;
+    white-space: nowrap;
+    position: sticky !important;
+    z-index: 2;
+    left: 0;
+    background: #fff;
+    box-shadow: 2px 0 2px 0 #ccc;
+    vertical-align: middle;
+  }
+
+  &__head-row &__head {
+    background: #f5f5f5;
+  }
+
+  // &__body,
+  &__day {
+    display: table-cell;
+    //position: relative;
+    //width: 100%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    user-select: none;
+    width: @cellWidth;
+    margin: 0;
+    padding: 0;
+
+    &.holyday {
+      background: rgba(255, 200, 200);
+    }
+
+    &.past {
+      background: rgba(0, 0, 0, 0.07);
+    }
+  }
+}
+
+.year-month {
+  font-size: 12px;
+  padding: 5px 2px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  //white-space: nowrap;
+  word-break: break-all;
+}
+
+.day {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 2px;
+  width: @cellWidth;
+  min-height: @cellHeight;
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+
+  &.busy,
+  &.first,
+  &.last {
+    cursor: pointer;
+  }
+
+  &.busy {
+    background: red;
+    //color: white;
+  }
+
+  &.first {
+    background: transparent;// white;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 2px;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      border-style: solid;
+      border-width: 0 0 @cellHeight @cellWidth;
+      border-color: transparent transparent red transparent;
+    }
+  }
+
+  &.last {
+    background: transparent;//white;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 3px;
+      bottom: 0;
+      z-index: 0;
+      border-style: solid;
+      border-width: @cellHeight @cellWidth 0 0;
+      border-color: red transparent transparent transparent;
+    }
+  }
+
+  .ant-popover-open &.busy {
+    background: #d00;
+  }
+
+  .ant-popover-open &.busy.first,
+  .ant-popover-open &.busy.last {
+    background: transparent;//#fff;
+  }
+
+  .ant-popover-open & {
+    &.first {
+      &::before {
+        border-color: transparent transparent #d00 transparent;
+      }
+    }
+
+    &.last {
+      &::after {
+        border-color: #d00 transparent transparent transparent;
+      }
+    }
+  }
+}
+
+.reservation {
+  padding: 0.5rem 0;
+
+  & > p {
+    margin: 0;
+  }
+
+  & > button {
+    margin-top: 0.5rem;
+  }
+
+  & + & {
+    border-top: 1px solid#f0f0f0;
+  }
+}
+
+.checked-for-booking .day {
+  background: #ddf;
+}

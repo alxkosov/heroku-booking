@@ -1,0 +1,49 @@
+{
+  "name": "booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "server": "json-server --watch db.json --port 3003",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.8.2",
+    "bootstrap": "^4.5.3",
+    "ckeditor4-react": "^1.2.1",
+    "classnames": "^2.2.6",
+    "json-server": "^0.16.2",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.5",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.3.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.5.0",
+    "less": "^3.12.2",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

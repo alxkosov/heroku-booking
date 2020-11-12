@@ -1,0 +1,136 @@
+.splitter-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px dotted #ddd;
+}
+
+.splitter {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.splitter-horizontal {
+  flex-direction: column;
+}
+
+.split-sensitive {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.splitter-zone {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  white-space: normal;
+
+  &_flexible {
+    flex: 1 1 0;
+  }
+
+  &_fixed {
+    flex: 0 1 auto;
+  }
+}
+
+.split-handler-ghost {
+  position: absolute;
+  z-index: 2000;
+  background: #565a66;
+  height: 1px;
+  margin-top: 3px;
+  opacity: 0.6;
+  display: none;
+  user-select: none;
+
+  &.vertical {
+    height: 100%;
+    margin-top: 0;
+    width: 1px;
+    margin-left: 3px;
+    opacity: 0.6;
+    display: none;
+    user-select: none;
+  }
+}
+
+.split-handler {
+  position: relative;
+  z-index: 99;
+  overflow: visible;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+  }
+
+  & .split-sensitive {
+    //--
+  }
+
+  .splitter-horizontal > & {
+    width: 100%;
+    cursor: n-resize;
+    height: 11px;
+    display: flex;
+    justify-content: center;
+
+    & .split-sensitive {
+      height: 11px;
+      top: -5px;
+    }
+
+    &::before {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      left: 0;
+      right: 0;
+      top: 5px;
+    }
+
+    &::after {
+      width: 55px;
+      height: 5px;
+      align-self: center;
+      background: url(/src/components/splitter/images/hdots.png) center center no-repeat;
+    }
+  }
+
+  .splitter-vertical > & {
+    height: 100%;
+    width: 11px;
+    display: flex;
+    align-items: center;
+    cursor: w-resize;
+
+    & .split-sensitive {
+      width: 11px;
+      left: -5px;
+    }
+
+    &::before {
+      background: #ccc;
+      height: 100% !important;
+      width: 1px;
+      left: 5px;
+    }
+
+    &::after {
+      width: 5px;
+      height: 55px;
+      background: url(/src/components/splitter/images/vdots.png) center center no-repeat;
+      left: 3px;
+    }
+  }
+}

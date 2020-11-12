@@ -1,0 +1,297 @@
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+.logo {
+  width: 140px;
+  height: 31px;
+  background-image: url(/assets/images/logo.png);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+#app {
+  //height: 100vh;
+  min-height: 100vh;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  header,
+  footer {
+    flex: none;
+  }
+
+  .main-layout {
+    flex: 1 1 auto;
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.ant-layout {
+  background: #fff;
+}
+
+.aside-left {
+  width: 300px;
+  padding-right: 20px;
+  flex: none;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mh100 {
+  min-height: 100px;
+}
+
+.fill-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.vertical-scroll {
+  overflow-y: auto;
+}
+
+.flex-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+
+  &_columns {
+    flex-direction: column;
+  }
+
+  &__auto {
+    flex: none;
+  }
+
+  &__fill {
+    flex: 1 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//курсор пойнтер
+.ant-list-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.selected {
+    background: #e5e5e5;
+  }
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+// .slick-slide {
+// 	width: 1280px;
+// 	height: 640px;
+
+// }
+
+//---------  ROOMS   -------
+.rooms-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.room {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+
+  & + & {
+    margin-left: 20px;
+  }
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  &:hover {
+    box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &__image {
+    & img {
+      width: 300px;
+      height: 200px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 0.3s linear;
+    }
+  }
+
+  &:hover &__image::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(128, 71, 71, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    bottom: 0;
+  }
+
+  &__price {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 30px;
+    border-radius: 0 0 0 7px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0 8px;
+    height: 30px;
+    line-height: 28px;
+    background: rgba(128, 71, 71, 0.7);
+    text-align: center;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+
+    &:active {
+      margin: 1px 0 0 0;
+    }
+  }
+
+  &:hover &__link {
+    color: #fff;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.room-gallery {
+  width: 480px;
+  height: 320px;
+  // float: left;
+  // margin-right: 40px;
+  .ant-carousel {
+    width: 480px;
+    height: 320px;
+    margin-bottom: 1rem;
+
+    & .slick-slider .slick-track,
+    & .slick-slider .slick-list {
+      height: 320px;
+    }
+
+    & .slick-slide div {
+      position: relative;
+      width: 480px;
+      height: 320px;
+      overflow: hidden;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.ant-form-item-control-input {
+  & .ant-btn {
+    margin-right: 10px;
+  }
+}
+
+.search-room-container {
+  margin: 20px auto;
+}
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item {
+  & + & {
+    margin-left: 40px;
+  }
+
+  &_fixed {
+    flex: none;
+  }
+
+  &_auto {
+    flex: auto;
+  }
+}
